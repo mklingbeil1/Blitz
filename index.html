@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Back to Blitz</title>
+<body style="margin:0;height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1b1740,#3a1b4d);color:#fff;font-family:-apple-system,sans-serif;text-align:center">
+  <div>
+    <h1>Returning to Blitz…</h1>
+    <p><a id="open" style="color:#c9a8ff" href="#">Tap here if nothing happens</a></p>
+  </div>
+  <script>
+    // Forwards the login result (?code=…&state=…) to the Blitz iPhone app.
+    var target = "blitz://auth" + location.search;
+    document.getElementById("open").href = target;
+    location.replace(target);
+  </script>
+</body>
